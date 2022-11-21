@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300&display=swap');
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Fredoka One', cursive;
+    background: #3B3486;
+}
+
+.titulo {
+    text-align: center;
+    color: white;
+    font-size: 32px;
+}
+
+.tarjetas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sub-titulo {
+    color: white;
+    font-size: 24px;
+}
+
+.tarjeta {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+input {
+    display: none;
+}
+
+input:checked+label {
+    background: #7895B2;
+}
+
+.tarjeta label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7743DB;
+    border-radius: 10px;
+    padding: 10px;
+    width: 180px;
+}
+
+.tarjeta label p {
+    color: white;
+}
+
+.tarjeta label img {
+    width: 80px;
+}
+
+#boton-mascota {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    background: transparent;
+    border: 3px solid white;
+    color: white;
+    width: 180px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+#boton-mascota:hover {
+    background-color: #7743DB;
+}
+
+
+
+/* Pantalla 2 */
+
+#seleccionar-ataque {
+    flex-direction: column;
+    align-items: center;
+}
+
+.boton-ataque {
+    background-color: #7743DB;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    width: 90px;
+    height: 60px;
+}
+
+.boton-ataque:hover {
+    background-color: #423b94;
+}
+
+#mensaje-seleccionar-mascotas {
+    width: 280px;
+    background-color: #FCFDF2;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#resetear {
+    border: none;
+    color: #3B3486;
+    background-color: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.disabled {
+    background-color: rgb(214, 214, 214);
+    cursor: not-allowed
+}
+
+.disabled:hover {
+    background-color: rgb(214, 214, 214);
+}
+
+.informacion-ataques {
+    display: grid;
+    grid-template-columns: 150px 150px;
+}
+
+.jugador,
+.enemigo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.jugador span:nth-child(1),
+.enemigo span:nth-child(1) {
+    font-size: 2em;
+}
+
+.jugador span,
+.enemigo span {
+    color: white;
+}
+
+#enemigo-ataques,
+#jugador-ataques {
+    color: white;
+    font-size: 0.8em;
+}
+
+#botones-ataques {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (max-width:360px) {
+
+    #contenedor-tarjetas {
+        flex-direction: column;
+    }
+
+    #botones-ataques {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #mensaje-seleccionar-mascotas {
+        width: 240px;
+    }
+}
